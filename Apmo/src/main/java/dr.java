@@ -19,9 +19,8 @@ public class dr {
          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
          driver.manage().window().maximize();
          driver.navigate().to("https://www.selenium.dev/selenium/docs/api/java/overview-summary.html");
-        // File screenshotfile=(File) ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-       //  FileUtils.copyDirectory(screenshotfile,new File(".//ScreenShot/scree.jpng"));
          File screenshotFile= ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+         
  	    FileUtils.copyFile(screenshotFile,new File(".//ScreeShot/scree.png"));
 	}
 
