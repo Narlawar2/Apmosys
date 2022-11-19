@@ -27,7 +27,7 @@ public class ActitimeSitePrintExcelSheet {
            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
            
            //FileInputStream
-           File f=new File("C:\\Users\\Prashant\\Desktop\\Act.xlsx");
+           File f=new File("C:\\Users\\Prashant\\Desktop\\actti.xlsx");
            FileInputStream fis= new FileInputStream(f);
           
            XSSFWorkbook wb= new XSSFWorkbook(fis);
@@ -41,7 +41,7 @@ public class ActitimeSitePrintExcelSheet {
            Thread.sleep(3000);
            driver.findElement(By.xpath("(//*[text()='Lock Time-Track'])[1]")).click();
            
-       WebElement t= driver.findElement(By.id("pageContent"));
+           WebElement t= driver.findElement(By.xpath("//*[@id=\'pageContent\']/table"));
        WebElement td=t.findElement(By.tagName("tbody"));
         
        List<WebElement> row=td.findElements(By.tagName("tr"));
@@ -51,11 +51,12 @@ public class ActitimeSitePrintExcelSheet {
     	   List<WebElement>col=row.get(i).findElements(By.tagName("td"));
     	   
     	   for(int j=0;j<col.size();j++) {
+    		   
     		   Cell cl=r.createCell(j);
     		   cl.setCellValue(col.get(j).getText());
     		   System.out.println(col.get(j).getText()+" ");
     	   }
-    	   System.out.println();
+    	   System.out.print( " ");
     	   
        }
        

@@ -18,8 +18,8 @@ public class Screnshot {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		driver.navigate().to("https://www.facebook.com/");
 		driver.manage().window().maximize();
-		File screenshotfile=(File) ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	    FileUtils.copyFile(screenshotfile, new File(".//ScreenShot/screen.jpegṢ"));
+		File screenshotfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    FileUtils.copyFile(screenshotfile, new File(".//ScreenShot/scre.jpng"));
 		
 		
 

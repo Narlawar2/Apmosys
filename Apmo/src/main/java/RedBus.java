@@ -78,8 +78,30 @@ public class RedBus {
         Thread.sleep(2000);
        //.executeScript("window.scrollBy(0,700)",args);
         driver.findElement(By.xpath("//*[@class=\"button btn-apply bp-apply\"]")).click();
+        Thread.sleep(3000);
         act.sendKeys(Keys.PAGE_DOWN).build().perform();
-        //js.executeScript("window.scrollBy(0,700)",args);
+           Thread.sleep(3000); 
+         driver.findElement(By.xpath("//*[@placeholder=\"DROPPING POINT\"]")).click();
+         driver.findElement(By.xpath("//*[@name=\"inpFilter\"]")).sendKeys("dharam");
+         driver.findElement(By.xpath("(//*[@for=\"dp_Dharampeth\"])[1]")).click();
+         Thread.sleep(3000);
+         driver.findElement(By.xpath("//*[text()=\"APPLY\"]")).click();
+         Thread.sleep(3000);
+         act.sendKeys(Keys.PAGE_DOWN).build().perform();
+         Thread.sleep(2000);
+         driver.findElement(By.xpath("//*[@placeholder=\"OPERATOR\"]")).click();
+         Thread.sleep(2000);
+         driver.findElement(By.name("inpFilter")).sendKeys("maha");
+         Thread.sleep(3000);
+         driver.findElement(By.xpath("//*[text()=\"APPLY\"]")).click();
+         act.sendKeys(Keys.PAGE_DOWN).build().perform();
+         
+         
+         
+         
+         
+         
+         
 
         		
         
