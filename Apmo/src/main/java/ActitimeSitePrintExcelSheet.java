@@ -27,11 +27,12 @@ public class ActitimeSitePrintExcelSheet {
            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
            
            //FileInputStream
-           File f=new File("C:\\Users\\Prashant\\Desktop\\actti.xlsx");
+           File f=new File("C:\\Users\\Prashant\\Desktop\\ac.xlsx");
            FileInputStream fis= new FileInputStream(f);
           
            XSSFWorkbook wb= new XSSFWorkbook(fis);
-           XSSFSheet Sheet = wb.getSheetAt(0);
+           
+           XSSFSheet Sheet = wb.getSheet("abc");
            
            driver.get("https://demo.actitime.com/login.do");
            driver.findElement(By.id("username")).sendKeys("admin");
@@ -56,7 +57,7 @@ public class ActitimeSitePrintExcelSheet {
     		   cl.setCellValue(col.get(j).getText());
     		   System.out.println(col.get(j).getText()+" ");
     	   }
-    	   System.out.print( " ");
+    	   System.out.print(" ");
     	   
        }
        

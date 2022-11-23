@@ -48,7 +48,7 @@ public class RedBus {
 		act.sendKeys(Keys.ENTER).build().perform();
 		driver.findElement(By.xpath("//input[@id=\"onward_cal\"]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("(//*[text()=\"20\"])[1]")).click();
+		driver.findElement(By.xpath("(//*[text()=\"23\"])[1]")).click();
 		Thread.sleep(2000);
 		//driver.findElement(By.id("id=\"r-date\"")).click();
 		driver.findElement(By.xpath("//*[@id=\"r-date\"]")).click();
@@ -59,8 +59,10 @@ public class RedBus {
         Thread.sleep(2000);
         driver.findElement(By.xpath("(//*[@for=\"dt12 pm to 6 pm\"])[1]")).click();
         Thread.sleep(2000);
+        
         JavascriptExecutor js= (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,300)", args);
+        
         Thread.sleep(3000);
         driver.findElement(By.xpath("(//*[@for=\"bt_AC\"])[1]")).click();
         Thread.sleep(3000);
